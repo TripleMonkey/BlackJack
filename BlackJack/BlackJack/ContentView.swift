@@ -10,16 +10,21 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query private var results: [Result]
 
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
+                ForEach(results) { result in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        Text("At \(result.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard)) you \(result.win ? "won!" : "lost.")")
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        HStack {
+                            Text(result.timestamp, format: Date.FormatStyle(date: .numeric, time: .shortened))
+                            Spacer()
+                            Text(result.win ? "WIN":"LOSE")
+                                .foregroundStyle(Color(result.win ? Color.green:Color.red))
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -46,7 +51,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
+            let newItem = Result(timestamp: Date(), win: .random())
             modelContext.insert(newItem)
         }
     }
@@ -54,7 +59,7 @@ struct ContentView: View {
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                modelContext.delete(results[index])
             }
         }
     }
@@ -62,5 +67,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: Result.self, inMemory: true)
 }

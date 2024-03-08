@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9EACB0F12B9A6017002B192B /* BlackJackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACB0F02B9A6017002B192B /* BlackJackApp.swift */; };
 		9EACB0F32B9A6017002B192B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACB0F22B9A6017002B192B /* ContentView.swift */; };
-		9EACB0F52B9A6017002B192B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACB0F42B9A6017002B192B /* Item.swift */; };
+		9EACB0F52B9A6017002B192B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACB0F42B9A6017002B192B /* Result.swift */; };
 		9EACB0F72B9A6018002B192B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EACB0F62B9A6018002B192B /* Assets.xcassets */; };
 		9EACB0FB2B9A6018002B192B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EACB0FA2B9A6018002B192B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -18,7 +18,7 @@
 		9EACB0ED2B9A6017002B192B /* BlackJack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackJack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EACB0F02B9A6017002B192B /* BlackJackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackApp.swift; sourceTree = "<group>"; };
 		9EACB0F22B9A6017002B192B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		9EACB0F42B9A6017002B192B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		9EACB0F42B9A6017002B192B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		9EACB0F62B9A6018002B192B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EACB0F82B9A6018002B192B /* BlackJack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlackJack.entitlements; sourceTree = "<group>"; };
 		9EACB0FA2B9A6018002B192B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 			children = (
 				9EACB0F02B9A6017002B192B /* BlackJackApp.swift */,
 				9EACB0F22B9A6017002B192B /* ContentView.swift */,
-				9EACB0F42B9A6017002B192B /* Item.swift */,
+				9EACB0F42B9A6017002B192B /* Result.swift */,
 				9EACB0F62B9A6018002B192B /* Assets.xcassets */,
 				9EACB0F82B9A6018002B192B /* BlackJack.entitlements */,
 				9EACB0F92B9A6018002B192B /* Preview Content */,
@@ -143,7 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EACB0F32B9A6017002B192B /* ContentView.swift in Sources */,
-				9EACB0F52B9A6017002B192B /* Item.swift in Sources */,
+				9EACB0F52B9A6017002B192B /* Result.swift in Sources */,
 				9EACB0F12B9A6017002B192B /* BlackJackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
