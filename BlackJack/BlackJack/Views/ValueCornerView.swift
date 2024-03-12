@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct ValueCornerView: View {
+    let value: String
+    let suit: String
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(value)
+                .font(.largeTitle)
+                .fontWeight(.black)
+            .fontDesign(.rounded)
+            Image(systemName: suit)
+                .font(.title)
+        }
     }
 }
 
 #Preview {
-    ValueCornerView()
+    ValueCornerView(value: "A", suit: "heart.fill")
 }

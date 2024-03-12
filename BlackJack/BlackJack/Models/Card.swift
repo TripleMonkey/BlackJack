@@ -10,7 +10,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class Card: Identifiable {
+final class Card {
 
     let id: UUID = UUID()
     let value: String
