@@ -10,8 +10,11 @@
 		9E5774C02BA0D645005A4EEB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5774BF2BA0D645005A4EEB /* Card.swift */; };
 		9E5774C32BA0D93B005A4EEB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5774C22BA0D93B005A4EEB /* CardView.swift */; };
 		9E5774C52BA0DB2A005A4EEB /* ValueCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5774C42BA0DB2A005A4EEB /* ValueCornerView.swift */; };
+<<<<<<< HEAD
 		9E9B302E2BA21F2700453798 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9B302D2BA21F2700453798 /* TableView.swift */; };
 		9E9B30322BA2461900453798 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9B30312BA2461900453798 /* Enums.swift */; };
+=======
+>>>>>>> 126a808071e182b239484e8cacc7b26c507fe58a
 		9EACB0F12B9A6017002B192B /* BlackJackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACB0F02B9A6017002B192B /* BlackJackApp.swift */; };
 		9EACB0F32B9A6017002B192B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACB0F22B9A6017002B192B /* ContentView.swift */; };
 		9EACB0F52B9A6017002B192B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACB0F42B9A6017002B192B /* Result.swift */; };
@@ -23,8 +26,11 @@
 		9E5774BF2BA0D645005A4EEB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		9E5774C22BA0D93B005A4EEB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9E5774C42BA0DB2A005A4EEB /* ValueCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueCornerView.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		9E9B302D2BA21F2700453798 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		9E9B30312BA2461900453798 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> 126a808071e182b239484e8cacc7b26c507fe58a
 		9EACB0ED2B9A6017002B192B /* BlackJack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackJack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EACB0F02B9A6017002B192B /* BlackJackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackApp.swift; sourceTree = "<group>"; };
 		9EACB0F22B9A6017002B192B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,7 +56,10 @@
 			children = (
 				9E5774C22BA0D93B005A4EEB /* CardView.swift */,
 				9E5774C42BA0DB2A005A4EEB /* ValueCornerView.swift */,
+<<<<<<< HEAD
 				9E9B302D2BA21F2700453798 /* TableView.swift */,
+=======
+>>>>>>> 126a808071e182b239484e8cacc7b26c507fe58a
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -59,7 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				9E5774BF2BA0D645005A4EEB /* Card.swift */,
+<<<<<<< HEAD
 				9E9B30312BA2461900453798 /* Enums.swift */,
+=======
+>>>>>>> 126a808071e182b239484e8cacc7b26c507fe58a
 				9EACB0F42B9A6017002B192B /* Result.swift */,
 			);
 			path = Models;
@@ -179,7 +191,10 @@
 				9E9B302E2BA21F2700453798 /* TableView.swift in Sources */,
 				9EACB0F12B9A6017002B192B /* BlackJackApp.swift in Sources */,
 				9E5774C02BA0D645005A4EEB /* Card.swift in Sources */,
+<<<<<<< HEAD
 				9E9B30322BA2461900453798 /* Enums.swift in Sources */,
+=======
+>>>>>>> 126a808071e182b239484e8cacc7b26c507fe58a
 				9E5774C32BA0D93B005A4EEB /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

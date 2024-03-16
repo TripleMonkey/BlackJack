@@ -8,13 +8,19 @@
 
 import Foundation
 import SwiftData
+<<<<<<< HEAD
 import SwiftUI
 
 
+=======
+
+@Model
+>>>>>>> 126a808071e182b239484e8cacc7b26c507fe58a
 final class Card {
 
     let id: UUID = UUID()
     let value: String
+<<<<<<< HEAD
     let suit: Suit
 
     // Set card color based on suit
@@ -33,6 +39,17 @@ final class Card {
         self.value = value
         self.suit = suit
         self.faceUp = faceUp
+=======
+    let suit: String
+
+    // Card positions
+    var faceUp = false
+    var matched = false
+
+    init(value: String, suit: String) {
+        self.value = value
+        self.suit = suit
+>>>>>>> 126a808071e182b239484e8cacc7b26c507fe58a
     }
 }
 
