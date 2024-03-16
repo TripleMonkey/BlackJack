@@ -9,20 +9,19 @@ import SwiftUI
 
 struct ValueCornerView: View {
     let value: String
-    let suit: String
+    let suit: Suit
 
     var body: some View {
         VStack {
             Text(value)
-                .font(.largeTitle)
                 .fontWeight(.black)
-            .fontDesign(.rounded)
-            Image(systemName: suit)
-                .font(.title)
+                .fontDesign(.rounded)
+            Image(systemName: "suit.\(suit).fill")
         }
+        .padding()
     }
 }
 
 #Preview {
-    ValueCornerView(value: "A", suit: "heart.fill")
+    ValueCornerView(value: "A", suit: .heart)
 }

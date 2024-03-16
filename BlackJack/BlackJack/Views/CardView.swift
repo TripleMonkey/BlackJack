@@ -6,38 +6,47 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 struct CardView: View {
-
-    let cardValue: String
-    let cardSuit: String
-
+    
+    let card: Card
+    let size: CGSize
+    
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .foregroundColor(.gray)
-            VStack {
-                HStack {
-                    ValueCornerView(value: cardValue, suit: cardSuit)
+        
+        GeometryReader { proxy in
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .shadow(color: .black, radius: 5, x: 0.0, y: 0.0)
+                    .foregroundColor(card.faceUp ? .white : card.color)
+                VStack {
+                    HStack {
+                        ValueCornerView(value: card.value, suit: card.suit)
+                        Spacer()
+                    }
                     Spacer()
-                }
-                .padding()
-                Spacer()
-                ValueCornerView(value: cardValue, suit: cardSuit)
-                    .scaleEffect(5.0)
-                Spacer()
-                HStack {
+                    ValueCornerView(value: card.value, suit: card.suit)
+                        .font(Font.system(size: 40))
                     Spacer()
-                    ValueCornerView(value: cardValue, suit: cardSuit)
-                        .rotationEffect(.degrees(180))
+                    HStack {
+                        Spacer()
+                        ValueCornerView(value: card.value, suit: card.suit)
+                            .rotationEffect(.degrees(180))
+                    }
                 }
-                .padding()
+                .foregroundColor(card.color)
             }
+            .frame(width: size.width, height: size.height)
         }
-        .padding()
     }
 }
 
 #Preview {
-    CardView(cardValue: "A", cardSuit: "heart.fill")
+    //    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    //    let container = try! ModelContainer(for: Card.self, configurations: config)
+    return CardView(card: Card(value: "A", suit: .heart, faceUp: true), size: CGSize(width: 180, height: 250))
+    //.modelContainer(container)
+    
 }
