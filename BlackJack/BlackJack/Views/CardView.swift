@@ -41,48 +41,12 @@ struct CardView: View {
             }
             .frame(width: size.width, height: size.height)
         }
-=======
-
-struct CardView: View {
-
-    let cardValue: String
-    let cardSuit: String
-
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .foregroundColor(.gray)
-            VStack {
-                HStack {
-                    ValueCornerView(value: cardValue, suit: cardSuit)
-                    Spacer()
-                }
-                .padding()
-                Spacer()
-                ValueCornerView(value: cardValue, suit: cardSuit)
-                    .scaleEffect(5.0)
-                Spacer()
-                HStack {
-                    Spacer()
-                    ValueCornerView(value: cardValue, suit: cardSuit)
-                        .rotationEffect(.degrees(180))
-                }
-                .padding()
-            }
-        }
-        .padding()
->>>>>>> 126a808071e182b239484e8cacc7b26c507fe58a
     }
 }
 
 #Preview {
-<<<<<<< HEAD
     //    let config = ModelConfiguration(isStoredInMemoryOnly: true)
     //    let container = try! ModelContainer(for: Card.self, configurations: config)
     return CardView(card: Card(value: "A", suit: .heart, faceUp: true), size: CGSize(width: 180, height: 250))
     //.modelContainer(container)
-    
-=======
-    CardView(cardValue: "A", cardSuit: "heart.fill")
->>>>>>> 126a808071e182b239484e8cacc7b26c507fe58a
-}
+
