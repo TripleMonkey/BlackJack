@@ -18,9 +18,9 @@ struct CardView: View {
         
         GeometryReader { proxy in
             ZStack {
-                RoundedRectangle(cornerRadius: 20)
+                RoundedRectangle(cornerRadius: 10)
                     .shadow(color: .black, radius: 5, x: 0.0, y: 0.0)
-                    .foregroundColor(card.faceUp ? .white : card.color)
+                    .foregroundColor(card.faceUp ? .white : .red)
                 VStack {
                     HStack {
                         ValueCornerView(value: card.value, suit: card.suit)
@@ -28,7 +28,8 @@ struct CardView: View {
                     }
                     Spacer()
                     ValueCornerView(value: card.value, suit: card.suit)
-                        .font(Font.system(size: 40))
+                        .fontWeight(.black)
+                        .font(.largeTitle)
                     Spacer()
                     HStack {
                         Spacer()
@@ -36,6 +37,7 @@ struct CardView: View {
                             .rotationEffect(.degrees(180))
                     }
                 }
+                .frame(width: size.width*0.9, height: size.height*0.95)
                 .foregroundColor(card.color)
             }
             .frame(width: size.width, height: size.height)
@@ -46,6 +48,6 @@ struct CardView: View {
 #Preview {
     //    let config = ModelConfiguration(isStoredInMemoryOnly: true)
     //    let container = try! ModelContainer(for: Card.self, configurations: config)
-    return CardView(card: Card(value: "A", suit: .heart, faceUp: true), size: CGSize(width: 180, height: 250))
+    return CardView(card: Card(value: "A", suit: .heart, faceUp: true), size: CGSize(width: 120, height: 200)).padding()
     //.modelContainer(container)
 }

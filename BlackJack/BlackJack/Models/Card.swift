@@ -10,7 +10,8 @@ import Foundation
 import SwiftData
 import SwiftUI
 
-final class Card {
+final class Card: Identifiable{
+    
 
     let id: UUID = UUID()
     let value: String
