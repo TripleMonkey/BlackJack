@@ -21,13 +21,9 @@ struct ValueCornerView: View {
                 .font(.largeTitle)
                 .fontWeight(.black)
             .fontDesign(.rounded)
-            Image(systemName: suit)
-                .font(.title)
-        }
     }
 }
 
 #Preview {
     ValueCornerView(value: "A", suit: .heart)
-    ValueCornerView(value: "A", suit: "heart.fill")
 }
