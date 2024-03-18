@@ -13,14 +13,10 @@ struct ValueCornerView: View {
     var body: some View {
         VStack {
             Text(value)
-                .fontWeight(.black)
                 .fontDesign(.rounded)
             Image(systemName: "suit.\(suit).fill")
         }
-        .padding()
-                .font(.largeTitle)
-                .fontWeight(.black)
-            .fontDesign(.rounded)
+        .fontWeight(.bold)
     }
 }
 

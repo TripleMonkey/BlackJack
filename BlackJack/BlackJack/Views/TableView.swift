@@ -9,32 +9,92 @@ import SwiftUI
 
 struct TableView: View {
 
-    let cardSize = CGSize(width: 180, height: 250)
+    let cardSize = CGSize(width: 120, height: 200)
+
+    @State var dealerHand: [Card] = [
+        Card(value: "A", 
+             suit: .heart,
+             faceUp: false),
+        Card(value: "Q", 
+             suit: .club,
+             faceUp: true),
+        Card(value: "2",
+             suit: .heart,
+             faceUp: true),
+        Card(value: "2",
+             suit: .heart,
+             faceUp: true),
+        Card(value: "2",
+             suit: .heart,
+             faceUp: true),
+        Card(value: "2",
+             suit: .heart,
+             faceUp: true),
+        Card(value: "2",
+             suit: .heart,
+             faceUp: true)
+    ]
+
+    @State var playerHand: [Card] = [
+        Card(value: "A",
+             suit: .heart,
+             faceUp: true),
+        Card(value: "8",
+             suit: .club,
+             faceUp: true),
+        Card(value: "2",
+             suit: .diamond,
+             faceUp: true)
+    ]
 
     var body: some View {
-        //GeometryReader { proxy in
-        VStack(alignment: .leading) {
-            // Spacer()
+        VStack(alignment: .center) {
             Text("Dealer Hand")
+                .font(.title2)
+                .fontWeight(.medium)
+                .foregroundStyle(Color.white)
+                .shadow(color: .black, radius: 1)
                 .padding()
-            ZStack {
-                CardView(card: Card(value: "A", suit: .heart, faceUp: false), size: cardSize)
-                CardView(card: Card(value: "Q", suit: .club, faceUp: true), size: cardSize)
-                    .offset(x: 80)
+            HStack {
+                ForEach(0..<dealerHand.count, id: \.self) { index in
+                    CardView(card: dealerHand[index], size: cardSize)
+                        .offset(x: CGFloat(20-index))
+                }
             }
             Text("My Hand")
+                .font(.title2)
+                .fontWeight(.medium)
+                .foregroundStyle(Color.white)
+                .shadow(color: .black, radius: 1)
                 .padding()
-            ZStack {
-                CardView(card: Card(value: "A", suit: .heart, faceUp: true), size: cardSize)
-                CardView(card: Card(value: "Q", suit: .club, faceUp: true), size: cardSize)
-                    .offset(x: 80)
-                CardView(card: Card(value: "Q", suit: .heart, faceUp: true), size: cardSize)
-                    .offset(x: 160)
+            HStack {
+                ForEach(0..<playerHand.count, id: \.self) { index in
+                    CardView(card: playerHand[index], size: cardSize)
+                        .offset(x: CGFloat(50-(50*index)))
+                }
             }
+            HStack {
+                Button("Stand") {
 
+                }
+                .fontWeight(.medium)
+                .foregroundStyle(Color.white)
+                .shadow(color: .black, radius: 1)
+                .padding(40)
+
+                Spacer()
+                Button("Hit Me") {
+
+                }
+                .fontWeight(.medium)
+                .foregroundStyle(Color.white)
+                .shadow(color: .black, radius: 1)
+                .padding(40)
+            }
+            .buttonStyle(.bordered)
+            .padding()
         }
-        .padding()
-        // }
+        .background(.green)
     }
 }
 
