@@ -11,39 +11,21 @@ struct TableView: View {
 
     let cardSize = CGSize(width: 120, height: 200)
 
+    let cardDeck = Deck(deckCount: 8)
+
     @State var dealerHand: [Card] = [
-        Card(value: "A", 
-             suit: .heart,
+        Card(suit: .heart, value: 1,
              faceUp: false),
-        Card(value: "Q", 
-             suit: .club,
-             faceUp: true),
-        Card(value: "2",
-             suit: .heart,
-             faceUp: true),
-        Card(value: "2",
-             suit: .heart,
-             faceUp: true),
-        Card(value: "2",
-             suit: .heart,
-             faceUp: true),
-        Card(value: "2",
-             suit: .heart,
-             faceUp: true),
-        Card(value: "2",
-             suit: .heart,
+        Card(suit: .club, value: 12,
              faceUp: true)
     ]
 
     @State var playerHand: [Card] = [
-        Card(value: "A",
-             suit: .heart,
+        Card(suit: .heart, value: 1,
              faceUp: true),
-        Card(value: "8",
-             suit: .club,
+        Card(suit: .club, value: 8,
              faceUp: true),
-        Card(value: "2",
-             suit: .diamond,
+        Card(suit: .diamond, value: 13,
              faceUp: true)
     ]
 
@@ -55,10 +37,12 @@ struct TableView: View {
                 .foregroundStyle(Color.white)
                 .shadow(color: .black, radius: 1)
                 .padding()
-            HStack {
-                ForEach(0..<dealerHand.count, id: \.self) { index in
-                    CardView(card: dealerHand[index], size: cardSize)
-                        .offset(x: CGFloat(20-index))
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(0..<dealerHand.count, id: \.self) { index in
+                        CardView(card: dealerHand[index], size: cardSize)
+                            .offset(x: CGFloat(50+(50*index)))
+                    }
                 }
             }
             Text("My Hand")
@@ -75,7 +59,7 @@ struct TableView: View {
             }
             HStack {
                 Button("Stand") {
-
+                    // TODO: add stand func here
                 }
                 .fontWeight(.medium)
                 .foregroundStyle(Color.white)
@@ -84,7 +68,7 @@ struct TableView: View {
 
                 Spacer()
                 Button("Hit Me") {
-
+                    // TODO: add hit function here
                 }
                 .fontWeight(.medium)
                 .foregroundStyle(Color.white)
