@@ -23,17 +23,17 @@ struct CardView: View {
                     .foregroundColor(card.faceUp ? .white : .red)
                 VStack {
                     HStack {
-                        ValueCornerView(value: card.value, suit: card.suit)
+                        ValueCornerView(value: card.valueShown, suit: card.suit)
                         Spacer()
                     }
                     Spacer()
-                    ValueCornerView(value: card.value, suit: card.suit)
+                    ValueCornerView(value: card.valueShown, suit: card.suit)
                         .fontWeight(.black)
                         .font(.largeTitle)
                     Spacer()
                     HStack {
                         Spacer()
-                        ValueCornerView(value: card.value, suit: card.suit)
+                        ValueCornerView(value: card.valueShown, suit: card.suit)
                             .rotationEffect(.degrees(180))
                     }
                 }
@@ -48,6 +48,6 @@ struct CardView: View {
 #Preview {
     //    let config = ModelConfiguration(isStoredInMemoryOnly: true)
     //    let container = try! ModelContainer(for: Card.self, configurations: config)
-    return CardView(card: Card(value: "A", suit: .heart, faceUp: true), size: CGSize(width: 120, height: 200)).padding()
+    return CardView(card: Card(suit: .heart, value: 1, faceUp: true), size: CGSize(width: 120, height: 200)).padding()
     //.modelContainer(container)
 }
